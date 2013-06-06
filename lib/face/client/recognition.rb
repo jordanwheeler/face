@@ -7,7 +7,7 @@ module Face
       end
 
       def faces_group(opts={})
-        opts.assert_valid_keys(:urls, :file, :detector, :attributes, :callback, :callback_url)
+        opts.assert_valid_keys(:uids, :urls, :file, :namespace, :detector, :attributes, :callback, :callback_url)
         make_request(:faces_group, opts)
       end
 
