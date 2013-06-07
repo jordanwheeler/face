@@ -30,6 +30,11 @@ module Face
         if opts[:uids].is_a? Array
           opts[:uids] = opts[:uids].join(',')
         end
+
+        puts API_METHODS[api_method]
+        puts opts
+        puts api_crendential
+
         response = JSON.parse( RestClient.post(API_METHODS[ api_method ], opts.merge(api_crendential)).body )
         if %w/success partial/.include?(response['status'])
           response
