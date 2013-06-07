@@ -7,7 +7,7 @@ module Face
       end
 
       def faces_group(opts={})
-        make_request(:faces_group, opts)
+        make_request(:faces_group, opts.merge(user_auth_param))
       end
 
       def faces_recognize(opts={})
