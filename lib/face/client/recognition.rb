@@ -7,6 +7,7 @@ module Face
       end
 
       def faces_group(opts={})
+        opts.assert_valid_keys(:uids, :urls, :namespace, :detector, :attributes, :callback, :callback_url)
         make_request(:faces_group, opts.merge(user_auth_param))
       end
 
